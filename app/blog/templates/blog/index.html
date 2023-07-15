@@ -1,6 +1,34 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Index{% endblock title %}
+{% block css_files %}
+    <link rel='stylesheet' href='{% static 'blog/post.css' %}'>
+    <link rel='stylesheet' href='{% static 'blog/index.css' %}'>
+{% endblock css_files %}
 
 {% block content %}
-    <h1>Welcome to my Blog Page</h1>
+    <section id="welcome">
+        <header>
+            <img src="{% static 'blog/images/max.png' %}" alt="Apoorv - The Author of this Blog" />
+            <h2>APOORV'S BLOG</h2>
+        </header>
+        <p>
+            Hi, I am Apoorv and I love to blog about tech and the world!
+        </p>
+    </section>
+    <section id="latest-posts">
+        <h2>My Latest thoughts</h2>
+        <ul>
+            {% include "blog/includes/post.html" %}
+        </ul>
+    </section>
+    <section id="about">
+        <h2>What I Do</h2>
+        <p>
+            I love programming. I love to help others and I enjoy exploring new Technologies in General.
+        </p>
+        <p>
+            My Goal is to keep growing as a developer - and progress as an Architecht.
+        </p>
+    </section>
 {% endblock content %}

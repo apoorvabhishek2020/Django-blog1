@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}This Post Title{% endblock title %}
+{% block css_files %}
+    <link rel='stylesheet' href="{% static 'blog/post-detail.css' %}">
+{% endblock css_files %}
+
+{% block content %}
+    <section id="summary">
+        <h2>Post Title</h2>
+        <article>
+            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post Title" />
+            <address>By Apoorv</address>
+            <div>
+                Last Updated on <time>July 10th</time>
+            </div>
+        </article>
+    </section>
+    <main>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia perspiciatis ipsam iusto vel aliquam debitis ipsa neque omnis temporibus? Deleniti blanditiis impedit quam voluptates sunt aut necessitatibus eos reiciendis non!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia perspiciatis ipsam iusto vel aliquam debitis ipsa neque omnis temporibus? Deleniti blanditiis impedit quam voluptates sunt aut necessitatibus eos reiciendis non!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia perspiciatis ipsam iusto vel aliquam debitis ipsa neque omnis temporibus? Deleniti blanditiis impedit quam voluptates sunt aut necessitatibus eos reiciendis non!
+        </p>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia perspiciatis ipsam iusto vel aliquam debitis ipsa neque omnis temporibus? Deleniti blanditiis impedit quam voluptates sunt aut necessitatibus eos reiciendis non!
+        </p>
+    </main>
+{% endblock content %}
