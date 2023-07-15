@@ -1,15 +1,12 @@
 {% load static %}
 <li>
     <article class="post">
-        <a href="{% url 'post-detail-page' 'the-mountains' %}">
-            <img src="{% static 'blog/images/mountains.jpg' %}" alt="Mountain Hiking" />
+        <a href="{% url 'post-detail-page' post.slug %}">
+            <img src="{% static 'blog/images/'|add:post.image %}" alt="{{ post.title }}" />
             <div class="post__content">
-                <h3>Mountain Hiking</h3>
+                <h3>{{ post.title }}</h3>
                 <p>
-                    There's nothing like a mountain hiking.
-                    It's really awesome and a fun moment for anyone who wants to travel.
-                    I love travelling to mountains and I do that very often.
-                    I have visited many and many hill stations.
+                    {{ post.excerpt }}
                 </p>
             </div>
         </a>
